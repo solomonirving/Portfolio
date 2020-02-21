@@ -1,0 +1,612 @@
+html {
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  /*Remove Scrollbar*/
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+/*Remove Scrollbar*/
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: white;
+}
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+}
+.menu-items{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: .7em;
+    background-color: rgb(51, 51, 51);
+    padding: 20% 10% 15% 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "roboto", sans-serif;
+}
+.title{
+    height: 600px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.title-name{
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #2196f3;
+    padding: 30% 1% 0% 1%;
+    letter-spacing: 6px;
+    font-family: "roboto", sans-serif;
+}
+.title-web{
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(51, 51, 51);
+    padding: 5% 2% 0% 2%;
+    letter-spacing: 3px;
+    font-family: "roboto", sans-serif;
+}
+.title-email{
+    text-align: center;
+    font-size: 1.2em;
+    color: rgb(51, 51, 51);
+    letter-spacing: 3px;
+    padding: 4% 2% 0% 2%;
+    font-family: "roboto", sans-serif;
+}
+.phone-title{
+    text-align: center;
+    color: rgb(51, 51, 51);
+    padding: 5% 2% 0% 2%;
+    letter-spacing: 3px;
+    font-size: 1.2em;
+    font-family: "roboto", sans-serif;
+}
+.git{
+    text-align: center;
+    padding: 5% 0 0 0;
+}
+.about{
+    height: 600px;
+    padding: 10% 0 0 0;
+}
+.h1-about{
+    text-align: center;
+    padding: 15% 0 0 0;
+    letter-spacing: 6px;
+    font-weight: bold;
+    font-size: 2em;
+    color: rgb(51, 51, 51);
+    font-family: "roboto", sans-serif;
+}
+.about-paragraph{
+    text-align: center;
+    padding: 0 10% 0 10%;
+    color: rgb(51, 51, 51);
+    line-height: 1.5em;
+    font-weight: lighter;
+    font-family: "roboto", sans-serif;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0 0 0;
+    height: 600px;
+    width: 100%;
+}
+.h1-skills{
+    text-align: center;
+    font-size: 2em;
+    color: rgb(51, 51, 51);
+    letter-spacing: 6px;
+    padding: 10% 0 0 0;
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+}
+.design{
+    box-shadow: 5px 5px 10px 1px gray;
+    margin: 0% 4% 0 4%;
+    padding: 2% 0 0 2%;
+    height: 170px;
+    border-radius: 20px;
+}
+.h1-design{
+    text-align: center;
+    color: rgb(51, 51, 51);
+    font-family: "roboto", sans-serif;
+    padding: 0 25% 0 0;
+}
+.balance{
+    padding: 0 20% 0 0;
+    color: #ed7256;
+}
+.paragraph-design{
+    text-align: center;
+    color: rgb(51, 51, 51);
+    padding: 0 5% 0 5%;
+    font-weight: lighter;
+    font-family: "roboto", sans-serif;
+}
+.development{
+    margin: 5% 4% 0 4%;
+    box-shadow: 5px 5px 10px 1px gray;
+    padding: 2% 0 0 0;
+    height: 170px;
+    border-radius: 20px;
+}
+.h1-development{
+    text-align: center;
+    color: rgb(51, 51, 51);
+    font-family: "roboto", sans-serif;
+    padding: 0 15% 0 5%;
+}
+.bullseye{
+    padding: 0 10% 0 0;
+    color: #9774fa;
+
+}
+.paragraph-development{
+    text-align: center;
+    color: rgb(51, 51, 51);
+    padding: 0 5% 0 5%;
+    font-family: "roboto", sans-serif;
+    font-weight: lighter;
+}
+.tools{ 
+    height: 600px;
+    width: 100%;
+    padding: 10% 5% 0 5%;
+    color: rgb(51, 51, 51);
+}
+.h1-tools{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10% 0 0 0;
+    letter-spacing: 6px;
+    font-weight: bold;
+    font-size: 2em;
+    color: rgb(51, 51, 51);
+    font-family: "roboto", sans-serif;
+}
+.tool-section{
+    padding: 1% 0 1% 0;
+}
+.tool-name{
+    text-align: left;
+    text-transform: uppercase;    
+    color: rgb(51, 51, 51);
+    font-family: "roboto", sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+}
+.progress-bar{
+    width: 95%;
+    height: 10px;
+    background-color: #2196f3;
+    border-radius: 10px;
+}
+.percent{
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+}
+.progress-background{
+    width: 350px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 10px;
+}
+.percent-css{
+    display: inline-block;
+    width: 210px;
+    text-align: right;}
+.progress-bar-bootstrap{
+    width: 85%;
+    height: 10px;
+    background-color: #2196f3;
+    border-radius: 10px;
+}
+.percent-bootstrap{
+    display: inline-block;
+    width: 240px;
+    text-align: right;}
+.progress-bar-javascript{
+    width: 85%;
+    height: 10px;
+    background-color: #2196f3;
+    border-radius: 10px;
+}
+.percent-javascript{
+    display: inline-block;
+    width: 240px;
+    text-align: right;
+}
+.progress-bar-jquery{
+    width: 85%;
+    height: 10px;
+    background-color: #2196f3;
+    border-radius: 10px;
+}
+.percent-jquery{
+    display: inline-block;
+    width: 270px;
+    text-align: right;
+}
+
+.projects{
+    height: 800px;
+    width: auto;
+    padding: 10% 0% 0 0%;
+    color: rgb(51, 51, 51);
+}
+.h1-projects{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    padding: 10% 0 0 0;
+    color: rgb(51, 51, 51);
+    font-family: "roboto", sans-serif;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+.project-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 700px;
+    width: auto;
+}
+.rest{
+    height: 200px;
+    width: auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 1px gray;
+}
+.photo{
+    height: 200px;
+    width: auto;
+    border-radius: 20px;
+    margin: 5% 0 0 0;
+    box-shadow: 5px 5px 10px 1px gray;
+}
+.contact{ 
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+    padding: 10% 0 20% 0;
+    color: rgb(51, 51, 51);
+}
+.h1-contact{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10% 0 0 0;
+    letter-spacing: 6px;
+    font-weight: bold;
+    font-size: 2em;
+    color: rgb(51, 51, 51);
+    font-family: "roboto", sans-serif;
+}
+.email-contact{
+    text-align: center;
+    box-shadow: 5px 5px 10px 1px gray;
+    height: 170px;
+    margin: 0 5% 0 5%;
+    padding: 1% 0 0 0;
+    font-family: "roboto", sans-serif;
+    border-radius: 20px;
+}
+.phone-contact{
+    text-align: center;
+    box-shadow: 5px 5px 10px 1px gray;
+    height: 170px;
+    margin: 5% 5% 0 5%;
+    padding: 1% 0 0 0;
+    font-family: "roboto", sans-serif;
+    border-radius: 20px;
+}
+#envelope{
+    text-align: center;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #2196f3;
+    border-radius: 50%;
+    padding: 30px 35px 35px 30px;
+}
+#phone{
+    text-align: center;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #2196f3;
+    border-radius: 50%;
+    padding: 30px 35px 35px 30px;
+}
+
+@media (min-width: 650px){
+    .header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+    }
+    .menu-items{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1em;
+        background-color: rgb(51, 51, 51);
+        padding: 26px 10% 26px 0;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: "roboto", sans-serif;
+    }
+    .title-name{
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #2196f3;
+        padding: 150px 2% 0% 2%;
+        letter-spacing: 6px;
+        font-family: "roboto", sans-serif;
+    }
+    .h1-about{
+        text-align: center;
+        padding: 50px 0 0 0;
+        letter-spacing: 6px;
+        font-weight: bold;
+        font-size: 2em;
+        color: rgb(51, 51, 51);
+        font-family: "roboto", sans-serif;
+    }
+    .skills{
+        display: flex;
+        flex-direction: column;
+        padding: 100px 0 0 0;
+        height: 600px;
+        width: 100%;
+    }
+    .skills-content{
+        display: flex;
+        flex-direction: row;
+    }
+    .h1-skills{
+        text-align: center;
+        font-size: 2em;
+        color: rgb(51, 51, 51);
+        letter-spacing: 6px;
+        padding: 50px 0 0 0;
+        font-weight: bold;
+        font-family: "roboto", sans-serif;
+    }
+    .design{
+        box-shadow: 5px 5px 10px 1px gray;
+        margin: 5% 2% 0 5%;
+        padding: 2% 0 0 0;
+        height: 200px;
+        border-radius: 20px;
+    }
+    .h1-design{
+        text-align: center;
+        color: rgb(51, 51, 51);
+        font-family: "roboto", sans-serif;
+        padding: 0 12% 0 0;
+    }
+    .balance{
+        padding: 0 5% 0 0;
+        color: #ed7256;
+    }
+    .paragraph-design{
+        text-align: center;
+        color: rgb(51, 51, 51);
+        padding: 0 5% 0 5%;
+        font-weight: lighter;
+        font-family: "roboto", sans-serif;
+    }
+    .development{
+        margin: 5% 5% 0 2%;
+        box-shadow: 5px 5px 10px 1px gray;
+        padding: 2% 0 0 0;
+        height: 200px;
+        border-radius: 20px;
+    }
+    .h1-development{
+        text-align: center;
+        color: rgb(51, 51, 51);
+        font-family: "roboto", sans-serif;
+        padding: 0 0 0 0;
+    }
+    .bullseye{
+        padding: 0 3% 0 0;
+        color: #9774fa;
+    
+    }
+    .paragraph-development{
+        text-align: center;
+        color: rgb(51, 51, 51);
+        padding: 0 2% 0 2%;
+        font-family: "roboto", sans-serif;
+        font-weight: lighter;
+    }
+    .tools{ 
+        height: 600px;
+        width: 100%;
+        padding: 10% 5% 0 0;
+        color: rgb(51, 51, 51);
+    }
+    .h1-tools{
+        text-align: center;
+        text-transform: uppercase;
+        padding: 50px 0 0 0;
+        letter-spacing: 6px;
+        font-weight: bold;
+        font-size: 2em;
+        color: rgb(51, 51, 51);
+        font-family: "roboto", sans-serif;
+    }
+    .tool-section{
+        padding: 1% 0 1% 4%;
+    }
+    .tool-name{
+        text-align: left;
+        text-transform: uppercase;    
+        color: rgb(51, 51, 51);
+        font-family: "roboto", sans-serif;
+        font-size: 1em;
+        letter-spacing: 0.5px;
+    }
+    .progress-bar{
+        width: 95%;
+        height: 10px;
+        background-color: #2196f3;
+        border-radius: 10px;
+    }
+    .percent{
+        display: inline-block;
+        width: 550px;
+        text-align: right;
+    }
+    .progress-background{
+        width: 600px;
+        height: 10px;
+        background-color: gray;
+        border-radius: 10px;
+    }
+    .percent-css{
+        display: inline-block;
+        width: 460px;
+        text-align: right;}
+    .progress-bar-bootstrap{
+        width: 85%;
+        height: 10px;
+        background-color: #2196f3;
+        border-radius: 10px;
+    }
+    .percent-bootstrap{
+        display: inline-block;
+        width: 490px;
+        text-align: right;}
+    .progress-bar-javascript{
+        width: 85%;
+        height: 10px;
+        background-color: #2196f3;
+        border-radius: 10px;
+    }
+    .percent-javascript{
+        display: inline-block;
+        width: 490px;
+        text-align: right;
+    }
+    .progress-bar-jquery{
+        width: 85%;
+        height: 10px;
+        background-color: #2196f3;
+        border-radius: 10px;
+    }
+    .percent-jquery{
+        display: inline-block;
+        width: 520px;
+        text-align: right;
+    }
+    .h1-projects{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2em;
+        padding: 50px 0 0 0;
+        color: rgb(51, 51, 51);
+        font-family: "roboto", sans-serif;
+        font-weight: bold;
+        letter-spacing: 6px;
+    }
+    .project-container{
+        display: flex;
+        flex-direction: row;
+        max-width: 1300px;
+    }
+    .rest{
+        height: 200px;
+        width: 60%;
+        border-radius: 20px;
+        margin: 5% 2% 0 5%;
+        box-shadow: 5px 5px 10px 1px gray;
+    }
+    .photo{
+        height: 200px;
+        width: 60%;
+        border-radius: 20px;
+        margin: 5% 5% 0 2%;
+        box-shadow: 5px 5px 10px 1px gray;
+    }
+    .contact-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .h1-contact{
+        text-align: center;
+        text-transform: uppercase;
+        padding: 50px 0 0 0;
+        letter-spacing: 6px;
+        font-weight: bold;
+        font-size: 2em;
+        color: rgb(51, 51, 51);
+        font-family: "roboto", sans-serif;
+    }
+    .email-contact{
+        text-align: center;
+        box-shadow: 5px 5px 10px 1px gray;
+        height: 200px;
+        width: 50%;
+        margin: 5% 2% 0 10%;
+        padding: 4% 0 0 0;
+        font-family: "roboto", sans-serif;
+        border-radius: 20px;
+    }
+    .phone-contact{
+        text-align: center;
+        box-shadow: 5px 5px 10px 1px gray;
+        margin: 5% 10% 0 2%;
+        height: 200px;
+        width: 50%;
+        padding: 4% 0 0 0;
+        font-family: "roboto", sans-serif;
+        border-radius: 20px;
+    }
+    #envelope{
+        text-align: center;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #2196f3;
+        border-radius: 50%;
+        padding: 30px 35px 35px 30px;
+    }
+    #phone{
+        text-align: center;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #2196f3;
+        border-radius: 50%;
+        padding: 30px 35px 35px 30px;
+    }
+}
+
