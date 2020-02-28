@@ -1,4 +1,4 @@
-html {
+ html {
     scroll-behavior: smooth;
     overflow: scroll;
     overflow-x: hidden;
@@ -11,38 +11,122 @@ html {
 /*Remove Scrollbar*/
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
-}
+} */
 a{
     text-decoration: none;
     color: inherit;
 }
-
 body{
     padding: 0;
     border: 0;
     margin: 0;
     background-color: white;
 }
-.header{
+.wrapper{
+    overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    height: 40px;
-    width: 100%;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+        "header"
+        "title"
+        "about"
+        "skills"
+        "tools"
+        "projects"
+        "contact";
+    height: 100%;
+}
+
+.header{
+    grid-area: header;
     position: fixed;
-    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(51, 51, 51);
+    height: 50px;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+}
+.fa-envelope{
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+.fa-phone{
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+.header-name{
+    position: relative;
+    color: white;
+    top: 10%;
+    justify-self: center;
+    /* left: 30%; */
+    font-family: "roboto", sans-serif;
+    font-size: 2em;
+    margin: 0;
+    text-decoration: none;
+}
+#a-link{
+    text-decoration: none;
+}
+.bars{ 
+    display: inline-block;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    z-index: 0;
+    cursor: pointer;
+}
+.side-nav{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background: rgb(51, 51, 51);
+    height: 100%;
+    width: 60%;
+    z-index: 2;
+    transform: translatex(-110%);
+    transition: all .6s ease-in-out;
+}
+.side-nav.active{
+    transform: translate(0);
+}
+ul{
+    padding: 0;
 }
 .menu-items{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: .7em;
-    background-color: rgb(51, 51, 51);
-    padding: 20% 10% 15% 0;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
     text-transform: uppercase;
-    text-align: center;
+    color: white;
+    list-style: none;
+    position: relative;
+    top: 10%;
+    left: 10%;
+    margin: 0;
+    padding: 0% 0 15% 0;
     font-family: "roboto", sans-serif;
+    font-size: 1.7em;
+    text-decoration: none;
 }
+
+.menu-close{
+    color: white;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    visibility: visible;
+}
+
 .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 600px;
     width: 100%;
     margin: 0;
@@ -50,19 +134,24 @@ body{
     border: 0;
 }
 .title-name{
+    grid-area: title;
     text-align: center;
     font-size: 2.4em;
     font-weight: bold;
     color: #2196f3;
-    padding: 30% 1% 0% 1%;
+    padding: 0 0 0 0;
     letter-spacing: 6px;
     font-family: "roboto", sans-serif;
+    margin: 0;
+}
+.title-box{
+    padding: 0 0 0 2%;
 }
 .title-web{
     text-align: center;
     font-size: 1.5em;
     color: rgb(51, 51, 51);
-    padding: 5% 2% 0% 2%;
+    /* padding: 5% 2% 0% 2%; */
     letter-spacing: 3px;
     font-family: "roboto", sans-serif;
 }
@@ -71,24 +160,30 @@ body{
     font-size: 1.2em;
     color: rgb(51, 51, 51);
     letter-spacing: 3px;
-    padding: 4% 2% 0% 2%;
+    /* padding: 4% 2% 0% 2%; */
     font-family: "roboto", sans-serif;
 }
 .phone-title{
     text-align: center;
     color: rgb(51, 51, 51);
-    padding: 5% 2% 0% 2%;
+    padding: 3% 0 0 0;
     letter-spacing: 3px;
     font-size: 1.2em;
     font-family: "roboto", sans-serif;
 }
 .git{
     text-align: center;
-    padding: 5% 0 0 0;
+    padding: 3% 0 0 0;
+}
+.fa-github{
+    color: rgb(51, 51, 51);
 }
 .about{
+    grid-area: about;
     height: 600px;
     padding: 10% 0 0 0;
+    z-index: -1;
+
 }
 .h1-about{
     text-align: center;
@@ -108,6 +203,7 @@ body{
     font-family: "roboto", sans-serif;
 }
 .skills{
+    grid-area: skills;
     display: flex;
     flex-direction: column;
     padding: 10% 0 0 0;
@@ -173,15 +269,24 @@ body{
     font-weight: lighter;
 }
 .tools{ 
+    display: flex;
+    flex-direction: row;
+    grid-area: tools;
     height: 600px;
     width: 100%;
-    padding: 10% 5% 0 5%;
+    justify-content: center;
+    z-index: -1;
     color: rgb(51, 51, 51);
 }
+.progress-section{
+    position: relative;
+    top: 30%;
+}
 .h1-tools{
+    position: absolute;
     text-align: center;
     text-transform: uppercase;
-    padding: 10% 0 0 0;
+    padding: 10% 0 1% 0;
     letter-spacing: 6px;
     font-weight: bold;
     font-size: 2em;
@@ -254,6 +359,7 @@ body{
 }
 
 .projects{
+    grid-area: projects;
     height: 800px;
     width: auto;
     padding: 10% 0% 0 0%;
@@ -281,6 +387,7 @@ body{
     width: auto;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 1px gray;
+    background: red;
 }
 .photo{
     height: 200px;
@@ -290,6 +397,7 @@ body{
     box-shadow: 5px 5px 10px 1px gray;
 }
 .contact{ 
+    grid-area: contact;
     display: flex;
     flex-direction: column;
     height: 600px;
@@ -312,7 +420,7 @@ body{
     box-shadow: 5px 5px 10px 1px gray;
     height: 170px;
     margin: 0 5% 0 5%;
-    padding: 1% 0 0 0;
+    padding: 2% 0 2% 0;
     font-family: "roboto", sans-serif;
     border-radius: 20px;
 }
@@ -321,53 +429,44 @@ body{
     box-shadow: 5px 5px 10px 1px gray;
     height: 170px;
     margin: 5% 5% 0 5%;
-    padding: 1% 0 0 0;
+    padding: 2% 0 2% 0;
     font-family: "roboto", sans-serif;
     border-radius: 20px;
 }
 #envelope{
     text-align: center;
-    width: 10px;
-    height: 10px;
-    border: 1px solid #2196f3;
+    width: 80px;
+    color: rgb(51, 51, 51);
+    height: 80px;
+    text-decoration: none;
+    border: 2px solid #2196f3;
     border-radius: 50%;
-    padding: 30px 35px 35px 30px;
+    vertical-align: middle;
+    display: table-cell;
+    /* padding: 30px 35px 35px 30px;  */
 }
 #phone{
     text-align: center;
-    width: 10px;
-    height: 10px;
-    border: 1px solid #2196f3;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #2196f3;
     border-radius: 50%;
-    padding: 30px 35px 35px 30px;
+    vertical-align: middle;
+    display: table-cell;
 }
 
-@media (min-width: 650px){
+@media (min-width: 700px){
     .header{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         height: 50px;
         width: 100%;
-        position: fixed;
-        top: 0px;
     }
-    .menu-items{
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        font-size: 1em;
-        background-color: rgb(51, 51, 51);
-        padding: 26px 10% 26px 0;
-        text-transform: uppercase;
-        text-align: center;
-        font-family: "roboto", sans-serif;
-    }
+
     .title-name{
         text-align: center;
         font-size: 2.5em;
         font-weight: bold;
         color: #2196f3;
-        padding: 150px 2% 0% 2%;
+        padding: 0 0 0% 0;
         letter-spacing: 6px;
         font-family: "roboto", sans-serif;
     }
@@ -452,7 +551,7 @@ body{
     .tools{ 
         height: 600px;
         width: 100%;
-        padding: 10% 5% 0 0;
+        padding: 10% 0 0 0;
         color: rgb(51, 51, 51);
     }
     .h1-tools{
@@ -464,9 +563,6 @@ body{
         font-size: 2em;
         color: rgb(51, 51, 51);
         font-family: "roboto", sans-serif;
-    }
-    .tool-section{
-        padding: 1% 0 1% 4%;
     }
     .tool-name{
         text-align: left;
@@ -496,7 +592,8 @@ body{
     .percent-css{
         display: inline-block;
         width: 460px;
-        text-align: right;}
+        text-align: right;
+    }
     .progress-bar-bootstrap{
         width: 85%;
         height: 10px;
@@ -608,5 +705,69 @@ body{
         border-radius: 50%;
         padding: 30px 35px 35px 30px;
     }
+    .side-nav{
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        background: rgb(51, 51, 51);
+        height: 100%;
+        width: 50%;
+        z-index: 2;
+        transform: translatex(-110%);
+        transition: all .6s ease-in-out;
+    }
+    .menu-items{
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        text-transform: uppercase;
+        color: white;
+        list-style: none;
+        position: relative;
+        top: 10%;
+        left: 30%;
+        margin: 0;
+        padding: 0 0 10% 0;
+        font-family: "roboto", sans-serif;
+        font-size: 1.7em;
+        text-decoration: none;
+    }
 }
-
+@media only screen and (max-device-width: 400px){
+    .menu-items{
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        text-transform: uppercase;
+        color: white;
+        list-style: none;
+        position: relative;
+        top: 10%;
+        left: 10%;
+        margin: 0;
+        padding: 30% 0 1% 0;
+        font-family: "roboto", sans-serif;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+}
+@media only screen and (min-device-width: 320px)
+                   and (max-device-width: 600px)
+                   and (orientation: landscape) {
+    .menu-items{
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        text-transform: uppercase;
+        color: white;
+        list-style: none;
+        position: relative;
+        top: 10%;
+        left: 10%;
+        margin: 0;
+        padding: 3% 0 5% 0;
+        font-family: "roboto", sans-serif;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+}
