@@ -324,9 +324,10 @@ ul{
 .percent-css{
     display: inline-block;
     width: 210px;
-    text-align: right;}
+    text-align: right;
+}
 .progress-bar-bootstrap{
-    width: 85%;
+    width: 95%;
     height: 10px;
     background-color: #2196f3;
     border-radius: 10px;
@@ -336,7 +337,7 @@ ul{
     width: 240px;
     text-align: right;}
 .progress-bar-javascript{
-    width: 85%;
+    width: 95%;
     height: 10px;
     background-color: #2196f3;
     border-radius: 10px;
@@ -347,7 +348,7 @@ ul{
     text-align: right;
 }
 .progress-bar-jquery{
-    width: 85%;
+    width: 95%;
     height: 10px;
     background-color: #2196f3;
     border-radius: 10px;
@@ -392,6 +393,14 @@ ul{
 .photo{
     height: 200px;
     width: auto;
+    border-radius: 20px;
+    margin: 5% 0 0 0;
+    box-shadow: 5px 5px 10px 1px gray;
+}
+.medical{
+    height: 200px;
+    width: 300px;
+    /* max-width: 235px; */
     border-radius: 20px;
     margin: 5% 0 0 0;
     box-shadow: 5px 5px 10px 1px gray;
@@ -595,7 +604,7 @@ ul{
         text-align: right;
     }
     .progress-bar-bootstrap{
-        width: 85%;
+        width: 95%;
         height: 10px;
         background-color: #2196f3;
         border-radius: 10px;
@@ -605,7 +614,7 @@ ul{
         width: 490px;
         text-align: right;}
     .progress-bar-javascript{
-        width: 85%;
+        width: 95%;
         height: 10px;
         background-color: #2196f3;
         border-radius: 10px;
@@ -616,7 +625,7 @@ ul{
         text-align: right;
     }
     .progress-bar-jquery{
-        width: 85%;
+        width: 95%;
         height: 10px;
         background-color: #2196f3;
         border-radius: 10px;
@@ -651,6 +660,13 @@ ul{
     .photo{
         height: 200px;
         width: 60%;
+        border-radius: 20px;
+        margin: 5% 5% 0 2%;
+        box-shadow: 5px 5px 10px 1px gray;
+    }
+    .medical{
+        height: 200px;
+        width: 50%;
         border-radius: 20px;
         margin: 5% 5% 0 2%;
         box-shadow: 5px 5px 10px 1px gray;
